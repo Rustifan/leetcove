@@ -61,11 +61,13 @@ class Terminal:
                 return
         raise RuntimeError("TUI remained busy")
 
-    def wait(self, text, mark=0, timeout=45):
+    def wait(self, text, mark=0, timeout=45, ignore_whitespace=False):
+        expected = "".join(text.split()) if ignore_whitespace else text
         deadline = time.monotonic() + timeout
         while time.monotonic() < deadline:
             readable = "\n".join(self.screen.display)
-            if text in readable or (text == "TERMINAL_EDITOR_OK" and text in self.output[mark:]):
+            visible = "".join(readable.split()) if ignore_whitespace else readable
+            if expected in visible or (text == "TERMINAL_EDITOR_OK" and text in self.output[mark:]):
                 return
             self.pump()
         raise RuntimeError(f"Terminal did not display {text!r}. Last screen:\n{readable}")
@@ -130,7 +132,7 @@ def run_smoke(workspace):
         terminal.wait("Custom test inputs", mark)
         mark = terminal.send(b"\x05")
         terminal.wait("TERMINAL_EDITOR_OK", mark)
-        terminal.wait("Reloaded", mark)
+        terminal.wait(f"Reloaded {workspace}/1-two-sum/tests.txt", mark, ignore_whitespace=True)
         terminal.idle()
         flags = termios.tcgetattr(descriptor)[3]
         if flags & termios.ICANON or flags & termios.ECHO:
