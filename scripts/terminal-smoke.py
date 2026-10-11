@@ -16,13 +16,13 @@ import time
 
 
 def editor(path):
-    root = os.environ["LEETCOVE_SMOKE_ROOT"]
-    if not str(Path(path).resolve()).startswith(root + "/"):
+    root = Path(os.environ["LEETCOVE_SMOKE_ROOT"]).resolve()
+    file = Path(path).resolve()
+    if not file.is_relative_to(root):
         raise RuntimeError("Editor received a path outside the test workspace")
     flags = termios.tcgetattr(sys.stdin.fileno())[3]
     if not flags & termios.ICANON or not flags & termios.ECHO:
         raise RuntimeError("OpenTUI did not restore canonical terminal mode")
-    file = Path(path)
     content = file.read_text()
     addition = "\n[3,3]\n6\n" if file.name == "tests.txt" else "\n# Edited through Ctrl+E\n"
     file.write_text(content + addition)
