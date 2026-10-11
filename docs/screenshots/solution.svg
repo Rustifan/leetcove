@@ -1,0 +1,336 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1184" height="748" viewBox="0 0 1184 748">
+<title>leetcove · solution preview</title>
+<desc>LeetCove's native terminal renderer, captured with sample data.</desc>
+<rect width="1184" height="748" rx="12" fill="#10141c"/>
+<path d="M12 0 H1172 Q1184 0 1184 12 V36 H0 V12 Q0 0 12 0" fill="#1b2432"/>
+<circle cx="20" cy="18" r="5" fill="#f49b9b"/>
+<circle cx="38" cy="18" r="5" fill="#e5c07b"/>
+<circle cx="56" cy="18" r="5" fill="#91d6a0"/>
+<text x="592" y="23" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#a8b7cd">leetcove · solution preview</text>
+<g font-family="'DejaVu Sans Mono', 'Liberation Mono', monospace" font-size="14">
+<rect x="16" y="52" width="1152" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="67" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
+<rect x="16" y="72" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="87" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="72" width="297" height="20" fill="rgb(16,20,28)"/>
+<text x="25" y="87" fill="rgb(128,183,255)" textLength="297" lengthAdjust="spacingAndGlyphs" style="white-space:pre">LeetCove   /   demo   /   python3</text>
+<rect x="322" y="72" width="846" height="20" fill="rgb(16,20,28)"/>
+<text x="322" y="87" fill="rgb(255,255,255)" textLength="846" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                              </text>
+<rect x="16" y="92" width="1152" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="107" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
+<rect x="16" y="112" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="127" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="112" width="1134" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="127" fill="rgb(48,59,78)" textLength="1134" lengthAdjust="spacingAndGlyphs" style="white-space:pre">┌─ 1. Two Sum · Easy ────────────────────────────────────────────────────────────────────────────────────────────────────────┐</text>
+<rect x="1159" y="112" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="127" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="132" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="147" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="132" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="147" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="132" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="147" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="43" y="132" width="450" height="20" fill="rgb(22,28,38)"/>
+<text x="43" y="147" fill="rgb(128,183,255)" textLength="450" lengthAdjust="spacingAndGlyphs" style="white-space:pre">1 description   2 [SOLUTION]   3 tests   4 results</text>
+<rect x="493" y="132" width="657" height="20" fill="rgb(22,28,38)"/>
+<text x="493" y="147" fill="rgb(255,255,255)" textLength="657" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                         </text>
+<rect x="1150" y="132" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="147" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="132" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="147" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="152" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="167" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="152" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="167" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="152" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="167" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="152" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="167" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="152" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="167" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="172" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="187" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="172" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="187" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="172" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="187" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="172" width="135" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="187" fill="rgb(215,224,238)" textLength="135" lengthAdjust="spacingAndGlyphs" style="white-space:pre">class Solution:</text>
+<rect x="187" y="172" width="963" height="20" fill="rgb(22,28,38)"/>
+<text x="187" y="187" fill="rgb(255,255,255)" textLength="963" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                           </text>
+<rect x="1150" y="172" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="187" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="172" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="187" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="192" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="207" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="192" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="207" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="192" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="207" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="192" width="576" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="207" fill="rgb(215,224,238)" textLength="576" lengthAdjust="spacingAndGlyphs" style="white-space:pre">    def twoSum(self, nums: List[int], target: int) -&gt; List[int]:</text>
+<rect x="628" y="192" width="522" height="20" fill="rgb(22,28,38)"/>
+<text x="628" y="207" fill="rgb(255,255,255)" textLength="522" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                          </text>
+<rect x="1150" y="192" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="207" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="192" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="207" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="212" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="227" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="212" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="227" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="212" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="227" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="212" width="153" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="227" fill="rgb(215,224,238)" textLength="153" lengthAdjust="spacingAndGlyphs" style="white-space:pre">        seen = {}</text>
+<rect x="205" y="212" width="945" height="20" fill="rgb(22,28,38)"/>
+<text x="205" y="227" fill="rgb(255,255,255)" textLength="945" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                         </text>
+<rect x="1150" y="212" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="227" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="212" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="227" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="232" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="247" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="232" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="247" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="232" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="247" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="232" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="247" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="232" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="247" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="252" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="267" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="252" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="267" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="252" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="267" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="252" width="396" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="267" fill="rgb(215,224,238)" textLength="396" lengthAdjust="spacingAndGlyphs" style="white-space:pre">        for index, value in enumerate(nums):</text>
+<rect x="448" y="252" width="702" height="20" fill="rgb(22,28,38)"/>
+<text x="448" y="267" fill="rgb(255,255,255)" textLength="702" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                              </text>
+<rect x="1150" y="252" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="267" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="252" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="267" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="272" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="287" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="272" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="287" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="272" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="287" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="272" width="351" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="287" fill="rgb(215,224,238)" textLength="351" lengthAdjust="spacingAndGlyphs" style="white-space:pre">            complement = target - value</text>
+<rect x="403" y="272" width="747" height="20" fill="rgb(22,28,38)"/>
+<text x="403" y="287" fill="rgb(255,255,255)" textLength="747" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                   </text>
+<rect x="1150" y="272" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="287" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="272" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="287" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="292" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="307" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="292" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="307" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="292" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="307" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="292" width="306" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="307" fill="rgb(215,224,238)" textLength="306" lengthAdjust="spacingAndGlyphs" style="white-space:pre">            if complement in seen:</text>
+<rect x="358" y="292" width="792" height="20" fill="rgb(22,28,38)"/>
+<text x="358" y="307" fill="rgb(255,255,255)" textLength="792" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                        </text>
+<rect x="1150" y="292" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="307" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="292" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="307" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="312" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="327" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="312" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="327" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="312" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="327" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="312" width="432" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="327" fill="rgb(215,224,238)" textLength="432" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                return [seen[complement], index]</text>
+<rect x="484" y="312" width="666" height="20" fill="rgb(22,28,38)"/>
+<text x="484" y="327" fill="rgb(255,255,255)" textLength="666" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                          </text>
+<rect x="1150" y="312" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="327" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="312" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="327" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="332" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="347" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="332" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="347" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="332" width="18" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="347" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="52" y="332" width="279" height="20" fill="rgb(22,28,38)"/>
+<text x="52" y="347" fill="rgb(215,224,238)" textLength="279" lengthAdjust="spacingAndGlyphs" style="white-space:pre">            seen[value] = index</text>
+<rect x="331" y="332" width="819" height="20" fill="rgb(22,28,38)"/>
+<text x="331" y="347" fill="rgb(255,255,255)" textLength="819" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                           </text>
+<rect x="1150" y="332" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="347" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="332" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="347" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="352" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="367" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="352" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="367" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="352" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="367" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="352" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="367" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="352" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="367" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="372" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="387" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="372" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="387" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="372" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="387" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="372" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="387" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="372" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="387" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="392" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="407" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="392" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="407" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="392" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="407" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="392" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="407" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="392" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="407" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="412" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="427" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="412" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="427" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="412" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="427" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="412" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="427" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="412" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="427" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="432" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="447" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="432" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="447" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="432" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="447" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="432" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="447" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="432" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="447" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="452" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="467" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="452" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="467" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="452" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="467" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="452" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="467" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="452" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="467" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="472" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="487" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="472" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="487" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="472" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="487" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="472" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="487" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="472" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="487" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="492" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="507" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="492" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="507" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="492" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="507" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="492" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="507" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="492" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="507" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="512" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="527" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="512" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="527" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="512" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="527" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="512" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="527" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="512" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="527" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="532" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="547" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="532" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="547" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="532" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="547" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="532" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="547" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="532" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="547" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="552" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="567" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="552" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="567" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="552" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="567" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="552" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="567" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="552" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="567" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="572" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="587" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="572" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="587" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="572" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="587" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="572" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="587" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="572" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="587" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="592" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="607" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="592" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="607" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="592" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="607" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="592" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="607" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="592" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="607" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="612" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="627" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="612" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="627" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="34" y="612" width="1116" height="20" fill="rgb(22,28,38)"/>
+<text x="34" y="627" fill="rgb(255,255,255)" textLength="1116" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                            </text>
+<rect x="1150" y="612" width="9" height="20" fill="rgb(22,28,38)"/>
+<text x="1150" y="627" fill="rgb(48,59,78)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre">│</text>
+<rect x="1159" y="612" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="627" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="632" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="647" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="632" width="1134" height="20" fill="rgb(22,28,38)"/>
+<text x="25" y="647" fill="rgb(48,59,78)" textLength="1134" lengthAdjust="spacingAndGlyphs" style="white-space:pre">└────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘</text>
+<rect x="1159" y="632" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="1159" y="647" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="16" y="652" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="667" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="652" width="189" height="20" fill="rgb(16,20,28)"/>
+<text x="25" y="667" fill="rgb(131,146,171)" textLength="189" lengthAdjust="spacingAndGlyphs" style="white-space:pre">Local files reloaded.</text>
+<rect x="214" y="652" width="954" height="20" fill="rgb(16,20,28)"/>
+<text x="214" y="667" fill="rgb(255,255,255)" textLength="954" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                          </text>
+<rect x="16" y="672" width="1152" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="687" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
+<rect x="16" y="692" width="9" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="707" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
+<rect x="25" y="692" width="1125" height="20" fill="rgb(16,20,28)"/>
+<text x="25" y="707" fill="rgb(131,146,171)" textLength="1125" lengthAdjust="spacingAndGlyphs" style="white-space:pre">h/l tabs  j/k scroll  i images  Ctrl+E edit  t tests  r run  s submit  f save failure  L language  x cancel  Esc back  ? help</text>
+<rect x="1150" y="692" width="18" height="20" fill="rgb(16,20,28)"/>
+<text x="1150" y="707" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="16" y="712" width="1152" height="20" fill="rgb(16,20,28)"/>
+<text x="16" y="727" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
+</g>
+</svg>

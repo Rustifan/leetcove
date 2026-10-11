@@ -1,0 +1,46 @@
+{
+  "name": "leetcove",
+  "version": "0.1.0",
+  "description": "A keyboard-first LeetCode client for the terminal.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rustifan/leetcove.git"
+  },
+  "homepage": "https://github.com/Rustifan/leetcove#readme",
+  "bugs": {
+    "url": "https://github.com/Rustifan/leetcove/issues"
+  },
+  "private": true,
+  "type": "module",
+  "engines": {
+    "bun": ">=1.3.14"
+  },
+  "bin": {
+    "leetcove": "src/index.ts"
+  },
+  "scripts": {
+    "start": "bun src/index.ts",
+    "dev": "bun src/index.ts",
+    "check": "tsc --noEmit",
+    "test": "bun test",
+    "login": "bun src/index.ts login",
+    "verify:terminal": "python3 scripts/terminal-smoke.py",
+    "verify:live": "bun scripts/verify-live.ts",
+    "screenshots": "bun scripts/screenshots.ts"
+  },
+  "dependencies": {
+    "@opentui/core": "0.6.0",
+    "shell-quote": "^1.8.3",
+    "tough-cookie": "^6.0.0",
+    "turndown": "^7.2.1",
+    "web-tree-sitter": "0.25.10",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0",
+    "@types/shell-quote": "^1.7.5",
+    "@types/turndown": "^5.0.5",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+*.log
+coverage/
+.leetcove/
+.venv/
+__pycache__/
+*.pyc
+*.tgz
+.DS_Store

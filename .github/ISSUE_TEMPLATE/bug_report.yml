@@ -1,0 +1,36 @@
+name: Bug report
+description: Report an issue with LeetCove.
+title: ""
+labels: [bug]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the problem and what you expected to happen.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: Include the problem slug and language when relevant.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Bun version, terminal, and editor.
+      placeholder: |
+        OS:
+        Bun:
+        Terminal:
+        Editor:
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Error output or screenshots
+      description: Include relevant output without session cookies or private account information.
