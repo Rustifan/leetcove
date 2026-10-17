@@ -18,6 +18,7 @@ import {
 import { accountLabel, formatDescription, formatResult, premiumFilterLabel, problemLabel, terminalText, verdict, type DescriptionImage } from "./format.ts";
 import { colors, syntaxStyle } from "./theme.ts";
 import { previewMarkdown } from "./markdown.ts";
+import { LanguageRoulette } from "./language-roulette.ts";
 import { ViewStateStore, type SavedViewState, type Tab } from "./view-state.ts";
 
 const tabs: Tab[] = ["description", "solution", "tests", "results"];
@@ -47,6 +48,7 @@ export class LeetCove {
   private readonly dialogMenu: SelectRenderable;
   private readonly helpScroll: ScrollBoxRenderable;
   private readonly helpContent: TextRenderable;
+  private readonly roulette: LanguageRoulette;
   private readonly style: SyntaxStyle;
   private screen: "list" | "problem" = "list";
   private activeTab: Tab = "description";
@@ -122,6 +124,8 @@ export class LeetCove {
     root.add(this.notice);
     root.add(this.help);
     root.add(this.dialog);
+    this.roulette = new LanguageRoulette(renderer);
+    root.add(this.roulette.overlay);
     renderer.root.add(root);
     this.bindEvents();
     this.updateChrome();
@@ -230,7 +234,7 @@ export class LeetCove {
     if (this.renderer.isDestroyed) return;
     const account = accountLabel(this.user, this.client.session.username);
     this.header.content = terminalText(`LeetCove   /   ${account}   /   ${this.language}${this.busy ? "   /   working…" : ""}`);
-    this.help.content = this.screen === "list" ? "j/k move  h/l page  Enter open  / search  d difficulty  f status  P premium  a login  ? help  q quit" : "h/l tabs  j/k scroll  i images  Ctrl+E edit  t tests  r run  s submit  f save failure  L language  x cancel  Esc back  ? help";
+    this.help.content = this.screen === "list" ? "j/k move  h/l page  Enter open  / search  d difficulty  f status  P premium  a login  ? help  q quit" : "h/l tabs  j/k scroll  i images  e edit  t tests  r/s run/submit  f save fail  L lang  z random  x cancel  Esc back  ? help";
     this.tabBar.content = tabs.map((tab, index) => `${index + 1} ${tab === this.activeTab ? `[${tab.toUpperCase()}]` : tab}`).join("   ");
   }
 
@@ -530,12 +534,32 @@ export class LeetCove {
   }
 
   private async changeLanguage(language: string): Promise<void> {
-    await this.perform(`Opening ${language} solution…`, async () => {
-      await this.loadWorkspace(language);
-      this.settings = { ...this.settings, language };
-      await saveSettings(this.paths, this.settings);
-      this.setTab("solution");
-      this.setNotice(`Using ${language} · ${this.files?.solution}`);
+    await this.perform(`Opening ${language} solution…`, () => this.applyLanguage(language));
+  }
+
+  private async applyLanguage(language: string): Promise<void> {
+    await this.loadWorkspace(language);
+    this.settings = { ...this.settings, language };
+    await saveSettings(this.paths, this.settings);
+    if (this.renderer.isDestroyed) return;
+    this.setTab("solution");
+    this.setNotice(`Using ${language} · ${this.files?.solution}`);
+  }
+
+  private async randomLanguage(): Promise<void> {
+    if (this.busy) return;
+    const languages = this.problem?.codeSnippets || [];
+    if (!languages.length || !this.problem?.content) return this.setNotice("No solution languages are available for this problem.");
+    await this.perform("Spinning the language roulette…", async (signal) => {
+      this.scrolls[this.activeTab].blur();
+      const winner = await this.roulette.play(languages, signal);
+      if (this.renderer.isDestroyed) return;
+      this.scrolls[this.activeTab].focus();
+      if (!winner) {
+        this.setNotice("Language roulette cancelled. Your language is unchanged.");
+        return;
+      }
+      await this.applyLanguage(winner.langSlug);
     });
   }
 
@@ -558,7 +582,7 @@ export class LeetCove {
     this.dialog.visible = true;
     this.dialogText.visible = false;
     this.dialogMenu.visible = false;
-    this.helpContent.content = `PROBLEMS\n  j/k or arrows    Move selection\n  h/l              Previous / next page\n  Enter            Open problem\n  /                Search title or number\n  d                Cycle difficulty\n  f                Cycle solved / attempted status\n  P                Cycle all / free only / Premium only\n  R                Refresh problems\n\nPROBLEM\n  h/l or Tab       Switch description / solution / tests / results\n  1/2/3/4          Select a view\n  j/k, Ctrl+d/u    Scroll\n  i                Open description image (choose if there are several)\n  Ctrl+E or e      Edit solution (test file when on Tests)\n  E                Edit tests from any view\n  r                Run saved code on custom tests\n  s                Submit saved code to the full judge\n  f                Save the failed submission's input to tests.txt\n  L                Choose language\n  p                Restore last submitted code (creates a backup)\n  R                Reload local files\n  x                Stop waiting for a job\n  Esc or q         Back to problem list\n\nGLOBAL\n  a                Browser login\n  Ctrl+C           Quit\n  ?                This help\n\nEsc closes this panel. j/k scrolls this help.`;
+    this.helpContent.content = `PROBLEMS\n  j/k or arrows    Move selection\n  h/l              Previous / next page\n  Enter            Open problem\n  /                Search title or number\n  d                Cycle difficulty\n  f                Cycle solved / attempted status\n  P                Cycle all / free only / Premium only\n  R                Refresh problems\n\nPROBLEM\n  h/l or Tab       Switch description / solution / tests / results\n  1/2/3/4          Select a view\n  j/k, Ctrl+d/u    Scroll\n  i                Open description image (choose if there are several)\n  Ctrl+E or e      Edit solution (test file when on Tests)\n  E                Edit tests from any view\n  r                Run saved code on custom tests\n  s                Submit saved code to the full judge\n  f                Save the failed submission's input to tests.txt\n  L                Choose language\n  z                Random language roulette (auto-selects)\n  p                Restore last submitted code (creates a backup)\n  R                Reload local files\n  x                Stop waiting for a job\n  Esc or q         Back to problem list\n\nGLOBAL\n  a                Browser login\n  Ctrl+C           Quit\n  ?                This help\n\nEsc closes this panel. j/k scrolls this help.`;
     this.menu.blur();
     this.scrolls[this.activeTab].blur();
     this.helpScroll.visible = true;
@@ -582,6 +606,7 @@ export class LeetCove {
       return;
     }
     if (this.editing) return;
+    if (this.roulette.visible) return this.handleRouletteKey(key);
     if (this.dialogMode) return this.handleDialogKey(key);
     if (this.searching) return this.handleSearchKey(key);
     if (key.name === "x") {
@@ -602,6 +627,11 @@ export class LeetCove {
     if (this.screen === "list") this.handleListKey(key);
     else this.handleProblemKey(key);
   };
+
+  private handleRouletteKey(key: KeyEvent): void {
+    key.preventDefault();
+    if (key.name === "escape" || key.name === "q" || key.name === "x") this.operation?.abort();
+  }
 
   private handleDialogKey(key: KeyEvent): void {
     if (this.dialogMode === "help" && key.name === "j") {
@@ -646,6 +676,7 @@ export class LeetCove {
   private handleProblemKey(key: KeyEvent): void {
     if (key.name === "escape" || key.name === "q") this.backToList();
     else if (key.name === "l" && key.shift) this.showLanguages();
+    else if (key.name === "z" && !key.ctrl && !key.meta && !key.option) void this.randomLanguage();
     else if (key.name === "h" || key.name === "left") this.nextTab(-1);
     else if (key.name === "l" || key.name === "right") this.nextTab(1);
     else if (key.name === "tab") this.nextTab(key.shift ? -1 : 1);

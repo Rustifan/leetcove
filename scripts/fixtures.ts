@@ -17,7 +17,11 @@ Explanation: nums[0] + nums[1] = 9.</pre>
 Output: [1,2]</pre>
 <h3>Constraints</h3><ul><li><code>2 &lt;= nums.length &lt;= 10^4</code></li><li><code>-10^9 &lt;= nums[i], target &lt;= 10^9</code></li><li>Exactly one valid answer exists.</li></ul>
 <p><strong>Follow-up:</strong> Can you solve this in linear time?</p>`,
-  codeSnippets: [{ lang: "Python3", langSlug: "python3", code: "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        pass" }],
+  codeSnippets: [
+    { lang: "Python3", langSlug: "python3", code: "class Solution:\n    def twoSum(self, nums: List[int], target: int) -> List[int]:\n        pass" },
+    { lang: "Rust", langSlug: "rust", code: "impl Solution {\n    pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {\n        todo!()\n    }\n}" },
+    { lang: "TypeScript", langSlug: "typescript", code: "function twoSum(nums: number[], target: number): number[] {\n    return [];\n}" },
+  ],
   exampleTestcaseList: ["[2,7,11,15]\n9", "[3,2,4]\n6", "[3,3]\n6"],
   metaData: JSON.stringify({ params: [{ name: "nums", type: "integer[]" }, { name: "target", type: "integer" }] }),
   hints: [],

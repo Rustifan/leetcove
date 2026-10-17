@@ -103,7 +103,7 @@ your solution files are retained.
 ## Workflow
 
 1. Search with **/**, navigate with **j/k**, and open a problem with **Enter**.
-2. Press **L** to choose a language and **Ctrl+E** to open the solution in your editor.
+2. Press **L** to choose a language (or **z** for a random one) and **Ctrl+E** to open the solution in your editor.
 3. Press **t** to view custom tests and **Ctrl+E** to edit them.
 4. Press **r** to run your saved solution, or **s** to submit it to the full judge.
 5. If a submission reports a failing input, press **f** to add it to your tests.
@@ -174,6 +174,7 @@ reports only the first failing input, rather than exposing its hidden suite.
 | `r` / `s` | Run custom tests / submit to the full judge |
 | `f` | Add the failed submission's reported input to tests |
 | `L` | Choose solution language |
+| `z` | Random language: a quick roulette reveal, then switch automatically |
 | `p` | Restore your last submission, creating a local backup |
 | `R` | Reload solution and tests from disk |
 | `x` | Stop waiting for the current operation |
@@ -201,7 +202,13 @@ Optional `browserExecutable` and `urlOpener` settings select the login browser a
 description-image opener. Images use qutebrowser when installed, otherwise the
 system opener. `LEETCOVE_BROWSER` and `LEETCOVE_OPENER` override their respective settings.
 
-Choosing a language with **L** saves that preference. Set `workspace` or
+Press **z** in a problem to spin through its supported languages. The final picks
+slow to a dramatic crawl, then the winner stays on screen for 1.2 seconds before
+its saved solution opens automatically (about 3 seconds total).
+**Esc** cancels without changing your language.
+Problems with only one language switch directly, without the animation.
+
+Choosing a language with **L** or **z** saves that preference. Set `workspace` or
 `LEETCOVE_WORKSPACE` to select a solution directory.
 
 | Data | Default location | Environment variable |

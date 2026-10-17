@@ -326,10 +326,10 @@
 <text x="16" y="687" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
 <rect x="16" y="692" width="9" height="20" fill="rgb(16,20,28)"/>
 <text x="16" y="707" fill="rgb(255,255,255)" textLength="9" lengthAdjust="spacingAndGlyphs" style="white-space:pre"> </text>
-<rect x="25" y="692" width="1125" height="20" fill="rgb(16,20,28)"/>
-<text x="25" y="707" fill="rgb(131,146,171)" textLength="1125" lengthAdjust="spacingAndGlyphs" style="white-space:pre">h/l tabs  j/k scroll  i images  Ctrl+E edit  t tests  r run  s submit  f save failure  L language  x cancel  Esc back  ? help</text>
-<rect x="1150" y="692" width="18" height="20" fill="rgb(16,20,28)"/>
-<text x="1150" y="707" fill="rgb(255,255,255)" textLength="18" lengthAdjust="spacingAndGlyphs" style="white-space:pre">  </text>
+<rect x="25" y="692" width="1098" height="20" fill="rgb(16,20,28)"/>
+<text x="25" y="707" fill="rgb(131,146,171)" textLength="1098" lengthAdjust="spacingAndGlyphs" style="white-space:pre">h/l tabs  j/k scroll  i images  e edit  t tests  r/s run/submit  f save fail  L lang  z random  x cancel  Esc back  ? help</text>
+<rect x="1123" y="692" width="45" height="20" fill="rgb(16,20,28)"/>
+<text x="1123" y="707" fill="rgb(255,255,255)" textLength="45" lengthAdjust="spacingAndGlyphs" style="white-space:pre">     </text>
 <rect x="16" y="712" width="1152" height="20" fill="rgb(16,20,28)"/>
 <text x="16" y="727" fill="rgb(255,255,255)" textLength="1152" lengthAdjust="spacingAndGlyphs" style="white-space:pre">                                                                                                                                </text>
 </g>

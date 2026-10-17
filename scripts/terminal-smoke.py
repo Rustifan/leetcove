@@ -141,6 +141,15 @@ def run_smoke(workspace):
         tests = solution.parent / "tests.txt"
         if "Edited through Ctrl+E" not in solution.read_text() or tests.read_text().count("[3,3]") != 2:
             raise RuntimeError("Edited solution/test files were not preserved")
+        terminal.send(b"z")
+        terminal.wait("SURPRISE ME", timeout=5)
+        terminal.wait("YOUR NEXT CHALLENGE", timeout=5)
+        terminal.wait("Using ", timeout=5)
+        terminal.idle()
+        if "[SOLUTION]" not in "\n".join(terminal.screen.display):
+            raise RuntimeError("Language roulette did not open the solution view")
+        if "Edited through Ctrl+E" not in solution.read_text():
+            raise RuntimeError("Language roulette overwrote the existing solution")
         terminal.send(b"q")
         terminal.wait("Problems", timeout=10)
         terminal.send(b"q")
@@ -148,7 +157,7 @@ def run_smoke(workspace):
         exited = True
         if os.waitstatus_to_exitcode(status) != 0:
             raise RuntimeError("TUI exited unsuccessfully")
-        print("Terminal smoke passed: problem view, solution/tests editors, canonical mode, file reload, clean quit.")
+        print("Terminal smoke passed: problem view, solution/tests editors, canonical mode, file reload, language roulette, clean quit.")
     finally:
         if not exited:
             stop_process(pid)

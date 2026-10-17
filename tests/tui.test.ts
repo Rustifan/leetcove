@@ -6,7 +6,7 @@ import { createTestRenderer, type TestRendererSetup } from "@opentui/core/testin
 import { LeetCove } from "../src/tui/app.ts";
 import type { LeetCodeClient } from "../src/api/client.ts";
 import type { Problem } from "../src/api/schemas.ts";
-import type { AppPaths } from "../src/storage.ts";
+import { loadSettings, type AppPaths } from "../src/storage.ts";
 import { openWorkspace, saveResult } from "../src/workspace.ts";
 import type { UrlOpener } from "../src/utils/open-url.ts";
 import { binaryWatchProblem, cleanPaths, failedSubmissionResult, fixtureClient, problem, temporaryPaths, type RecordedRequest } from "./fixtures.ts";
@@ -89,6 +89,149 @@ test("search typing cannot run or submit code, and a small terminal remains navi
     app.close();
     await app.finish();
     await setup.dispose();
+    await cleanPaths(paths);
+  }
+});
+
+test("z reveals a random language, restores its saved solution, and persists the normal language preference", async () => {
+  const paths = await temporaryPaths();
+  const requests: RecordedRequest[] = [];
+  try {
+    const python = await openWorkspace(problem, "python3", paths, { language: "python3" });
+    const rust = await openWorkspace(problem, "rust", paths, { language: "python3" });
+    const pythonCode = "# My saved Python solution\nclass Solution:\n    pass\n";
+    const rustCode = "// My saved Rust solution\nimpl Solution {}\n";
+    await writeFile(python.solution, pythonCode);
+    await writeFile(rust.solution, rustCode);
+    await withTestUi(paths, fixtureClient(requests), async (setup, app) => {
+      const started = Date.now();
+      setup.mockInput.pressKey("z");
+      await waitForText(setup, "SURPRISE ME");
+      expect(setup.captureCharFrame()).toContain("L A N G U A G E   R O U L E T T E");
+      expect(setup.captureCharFrame()).toContain("Esc cancel");
+      setup.mockInput.pressKey("z");
+      setup.mockInput.pressKey("s");
+      setup.mockInput.pressKey("r");
+      setup.mockInput.pressKey("l", { shift: true });
+      setup.resize(60, 20);
+      await setup.flush();
+      expect(setup.captureCharFrame()).toContain("SURPRISE ME");
+      expect(setup.captureCharFrame()).toContain("Esc cancel");
+      await waitForText(setup, "YOUR NEXT CHALLENGE");
+      await Bun.sleep(700);
+      await setup.flush();
+      expect(setup.captureCharFrame()).toContain("YOUR NEXT CHALLENGE");
+      await app.finish();
+      await setup.flush();
+      expect(Date.now() - started).toBeLessThan(4_500);
+      const settings = await loadSettings(paths);
+      expect(["python3", "rust"]).toContain(settings.language);
+      const selectedCode = settings.language === "rust" ? "My saved Rust solution" : "My saved Python solution";
+      const frame = setup.captureCharFrame();
+      expect(frame).toContain(selectedCode);
+      expect(frame).toContain("[SOLUTION]");
+      expect(frame).toContain(`Using ${settings.language}`);
+      expect(frame).not.toContain("R O U L E T T E");
+      expect(await readFile(python.solution, "utf8")).toBe(pythonCode);
+      expect(await readFile(rust.solution, "utf8")).toBe(rustCode);
+      expect(requests.some((request) => /\/(submit|interpret_solution)\/$/.test(request.url))).toBe(false);
+      setup.mockInput.pressKey("l", { shift: true });
+      await waitForText(setup, "Choose solution language");
+      setup.mockInput.pressEscape();
+    }, problem.titleSlug);
+    await withTestUi(paths, fixtureClient(), async (setup) => {
+      expect(setup.captureCharFrame()).toContain("[SOLUTION]");
+      expect(setup.captureCharFrame()).toContain((await loadSettings(paths)).language);
+    });
+  } finally {
+    await cleanPaths(paths);
+  }
+});
+
+test("roulette supports enhanced keyboard input and cancellation in a small terminal without changing files, language, or tab", async () => {
+  const paths = await temporaryPaths();
+  const setup = await createTestRenderer({ width: 60, height: 20, kittyKeyboard: true });
+  const app = new LeetCove(setup.renderer, fixtureClient(), paths, { language: "python3" });
+  try {
+    await app.initialize(problem.titleSlug);
+    setup.mockInput.pressKey("t");
+    await setup.flush();
+    const files = await openWorkspace(problem, "python3", paths, { language: "python3" });
+    const original = await readFile(files.solution, "utf8");
+    setup.mockInput.pressKey("z", { ctrl: true });
+    await setup.flush();
+    expect(setup.captureCharFrame()).not.toContain("SURPRISE ME");
+    setup.mockInput.pressKey("z");
+    await waitForText(setup, "SURPRISE ME");
+    expect(setup.captureCharFrame()).toContain("Esc cancel");
+    setup.mockInput.pressEscape();
+    await app.finish();
+    await waitForText(setup, "Language roulette cancelled.");
+    expect(setup.captureCharFrame()).toContain("[TESTS]");
+    expect(setup.captureCharFrame()).not.toContain("R O U L E T T E");
+    expect(await loadSettings(paths)).toEqual({ language: "python3" });
+    expect(await readFile(files.solution, "utf8")).toBe(original);
+    expect(await Bun.file(join(files.directory, "solution.rust.rs")).exists()).toBe(false);
+    setup.mockInput.pressKey("l", { shift: true });
+    await waitForText(setup, "Choose solution language");
+  } finally {
+    app.close();
+    await app.finish();
+    await setup.dispose();
+    await cleanPaths(paths);
+  }
+});
+
+test("roulette does not intercept list search or other dialogs and handles unavailable/single languages", async () => {
+  const paths = await temporaryPaths();
+  const oneLanguage = { ...problem, codeSnippets: problem.codeSnippets?.slice(1) || [] };
+  const unavailable = { ...problem, codeSnippets: null, content: null, titleSlug: "locked" };
+  try {
+    await withTestUi(paths, fixtureClient([], [oneLanguage, unavailable]), async (setup, app) => {
+      setup.mockInput.pressKey("z");
+      await setup.flush();
+      expect(setup.captureCharFrame()).not.toContain("SURPRISE ME");
+      setup.mockInput.pressKey("/");
+      await setup.mockInput.typeText("z");
+      await setup.flush();
+      expect(setup.captureCharFrame()).not.toContain("SURPRISE ME");
+      setup.mockInput.pressEscape();
+      await waitForText(setup, "0 of 0");
+      await app.openProblem(problem.titleSlug);
+      setup.mockInput.pressKey("l", { shift: true });
+      await waitForText(setup, "Choose solution language");
+      setup.mockInput.pressKey("z");
+      await setup.flush();
+      expect(setup.captureCharFrame()).toContain("Choose solution language");
+      setup.mockInput.pressEscape();
+      await waitForText(setup, "[DESCRIPTION]");
+      setup.mockInput.pressKey("z");
+      await app.finish();
+      await waitForText(setup, "Using rust");
+      expect(setup.captureCharFrame()).toContain("impl Solution");
+      expect(setup.captureCharFrame()).not.toContain("SURPRISE ME");
+      await app.openProblem(unavailable.titleSlug);
+      setup.mockInput.pressKey("z");
+      await waitForText(setup, "No solution languages are available");
+    });
+  } finally {
+    await cleanPaths(paths);
+  }
+});
+
+test("closing during roulette aborts its animation and cannot persist a random choice afterward", async () => {
+  const paths = await temporaryPaths();
+  try {
+    await withTestUi(paths, fixtureClient(), async (setup, app) => {
+      setup.mockInput.pressKey("z");
+      await waitForText(setup, "SURPRISE ME");
+      setup.mockInput.pressKey("c", { ctrl: true });
+      await app.finish();
+      expect(setup.renderer.isDestroyed).toBe(true);
+      expect(await loadSettings(paths)).toEqual({ language: "python3" });
+      expect(await Bun.file(join(paths.workspace, "1214-two-sum-bsts", "solution.rust.rs")).exists()).toBe(false);
+    }, problem.titleSlug);
+  } finally {
     await cleanPaths(paths);
   }
 });
